@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home - Business Website">
+    <meta name="keywords" content="business, services, home">
+    <meta name="author" content="Your Company">
+    <title>Home of Business</title>
+    <link rel="stylesheet" href="assets/css/sty.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="./fc4a3f64-c36c-4ac1-9e98-cf38e9a04d20.png" type="image/png">
+    <style>
+/* Basic Navbar Styling */
+nav {
+  background-color: #000000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Navigation Menu */
+
+  
+  ul li {
+    position: relative;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Active Link (optional, if you add an "active" class to the current page) */
+  ul li a.active {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  #navbar-logo {
+    width: 50px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and text */
+    border-radius: 20%;
+  }
+/* Desktop Menu (Visible on Desktop) */
+.desktop-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.desktop-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.desktop-menu li a:hover {
+  text-decoration: none;
+}
+
+/* Hamburger Icon (Visible on mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Sidebar Menu (Hidden by default) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #007BFF;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  left: 0; /* Show when active */
+}
+
+.sidebar ul {
+  position: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 60px; /* Space for navbar */
+}
+
+.sidebar ul li {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 15px;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #0056b3;
+}
+
+/* Hide Desktop Menu and Show Hamburger on Mobile */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none; /* Hide desktop menu on small screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .sidebar {
+    left: -250px; /* Sidebar is hidden on mobile by default */
+  }
+}
+@media (max-width: 768px) {
+          /* Show hamburger menu on mobile */
+          .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+    }
+    </style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            <ul class="desktop-menu">
+                <li><img src="./fc4a3f64-c36c-4ac1-9e98-cf38e9a04d20.png" alt="Logo" id="navbar-logo"></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+          <ul>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="extra.html" onclick="toggleMenu()">Extra</a></li>
+        </ul>
+        </div>
+            
+    <!-- User Greeting Section -->
+    <section id="userGreeting" style="text-align: center; margin-top: 20px;">
+        <h2>Welcome, <span id="userName">User</span>!</h2>
+        <button id="logoutButton">Logout</button>
+    </section>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="container">
+        <h2 class="HB1">We <span id="typedText"></span></h2>
+        <h1 id="HB">Welcome to HB (home of business)</h1>
+        <p>Your trusted partner in providing exceptional business solutions.</p><br>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+    </div>
+</section>
+
+<button id="darkToggle">🌔</button>
+
+</nav>
+</header>
+
+<!-- Services Preview Section -->
+<section id="services" class="services-section">
+<div class="container">
+<h2>Our Services</h2>
+<div class="service-items">
+    <div class="service-item">
+        <i class="fas fa-cogs"></i>
+        <h3>Service 1</h3>
+        <p>We create different types of website. e.g e-commerce, restuarant, programming......</p>
+    </div>
+    <div class="service-item">
+        <i class="fas fa-clipboard-list"></i>
+        <h3>Service 2</h3>
+        <p>we are fast and very reliable.</p>
+    </div>
+    <div class="service-item">
+        <i class="fas fa-chart-line"></i>
+        <h3>Service 3</h3>
+        <p>we support you in any work you do.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+<div class="container">
+<h2>About Us</h2>
+<p>We are a company committed to providing top-tier business solutions for your needs. We specialize in delivering results-driven services that cater to your business’s success.</p>
+</div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">What Our Clients Says</h2>
+        <div class="testimonial">
+            <p>"This company has transformed the way we do business. Highly recommended!"</p>
+            <p>- Client A</p>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing customer service and great results. Our revenue increased by 40%!"</p>
+            <p>- Client B</p>
+        </div>
+        <div class="testimonial">
+            <h2 class="section-title animate-on-scroll">subscription</h2>
+            <p>"This site is Amazing its very reliable, secure and virus free here you can buy "ads-free, subscription and news-letter"</p><br>
+            <a href="subscribe.html" class="cta-button">subscribe</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+    <div class="container">
+        <h2>Our Key Features</h2>
+        <div class="feature-item">
+            <i class="fas fa-check-circle"></i>
+            <h3>Feature 1</h3>
+            <p>High-quality service with a focus on efficiency.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-rocket"></i>
+            <h3>Feature 2</h3>
+            <p>Innovative solutions that drive business growth.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-lock"></i>
+            <h3>Feature 3</h3>
+            <p>Security at the core of everything we do.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Top Button -->
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+<div class="fixed-icons">
+    <a href="./contact.html" class="icon email" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://wa.me/+2349013834682" class="icon whatsapp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+<script src="./logout.js"></script> 
+<script src="./script.js"></script>
+<script src="./setup.js"></script>
+<script>
+    function toggleMenu() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('active');
+    }
+    </script>
+<script>
+    const animatedItems = document.querySelectorAll('.animate-on-scroll');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    animatedItems.forEach(item => {
+      observer.observe(item);
+    });
+  </script>
+  <!-- Load the AdSense script (you already have this part) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1243697761577753"
+crossorigin="anonymous"></script>
+
+<!-- Display the ad unit -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-1243697761577753"
+data-ad-slot="YOUR-AD-SLOT-ID"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  
+<!-- Footer Section -->
+<footer>
+  <div class="container">
+      <p>© 2025 Business Name | All rights reserved</p>
+      <ul class="social-media-links">
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+      </ul>
+  </div>
+
+</body>
+</html>

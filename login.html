@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button type="submit" id="loginBtn" disabled>Login</button>
+    <p>Don't have an account?</p><a href="sign-up.html">signup</a>
+  </form>
+    </div>
+
+  <script>
+ document.addEventListener('DOMContentLoaded', () => {
+    // Grab the form fields and button
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const loginBtn = document.getElementById("loginBtn");
+
+    // Function to enable/disable the login button based on form input
+    function checkForm() {
+        const emailFilled = emailInput.value.trim() !== "";
+        const passwordFilled = passwordInput.value.trim() !== "";
+        loginBtn.disabled = !(emailFilled && passwordFilled);  // Disable button if either field is empty
+    }
+
+    // Check form initially in case the user fills in values before the page loads
+    checkForm();
+
+    // Add event listeners to check form fields on input
+    emailInput.addEventListener("input", checkForm);
+    passwordInput.addEventListener("input", checkForm);
+
+    // Handle form submission
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Get the users data from localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if the user exists and password matches
+        const user = users.find(user => user.email === email && user.password === password);
+
+        if (user) {
+            alert("Login successful!");
+            window.location.href = "index.html"; // Redirect to homepage after login
+        } else {
+            alert("Invalid email or password.");
+        }
+    });
+});
+
+  </script>
+
+</body>
+</html>

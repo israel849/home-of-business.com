@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation Header */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  /* Nav Container */
+  nav {
+    background-color: #000000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  /* Navigation Menu */
+  
+    
+    ul li {
+      position: relative;
+    }
+    
+    ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hover Effect */
+    ul li a:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+    
+    /* Active Link (optional, if you add an "active" class to the current page) */
+    ul li a.active {
+      background-color: #0056b3;
+      color: #fff;
+    }
+    #navbar-logo {
+      width: 50px; /* Adjust the size */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 15px; /* Space between logo and text */
+      border-radius: 20%;
+    }
+  /* Desktop Menu (Visible on Desktop) */
+  .desktop-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .desktop-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .desktop-menu li a:hover {
+    text-decoration: none;
+  }
+  
+  /* Hamburger Icon (Visible on mobile) */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Sidebar Menu (Hidden by default) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #007BFF;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.active {
+    left: 0; /* Show when active */
+  }
+  
+  .sidebar ul {
+    position: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 60px; /* Space for navbar */
+  }
+  
+  .sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 15px;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Hide Desktop Menu and Show Hamburger on Mobile */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none; /* Hide desktop menu on small screens */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger icon */
+    }
+  
+    .sidebar {
+      left: -250px; /* Sidebar is hidden on mobile by default */
+    }
+  }
+  @media (max-width: 768px) {
+            /* Show hamburger menu on mobile */
+            .hamburger {
+          display: flex;
+        }
+  
+        nav ul {
+          display: none;
+        }
+  
+        .mobile-menu.active {
+          display: block;
+        }
+      }
+  
+/* Chat Box Styling */
+.chat-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .chat-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .chat-box label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .chat-box input, .chat-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .chat-box textarea {
+    resize: vertical;
+  }
+  
+  .chat-box button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-box button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .chat-box {
+      margin: 20px;
+    }
+  }
+  
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.social-media-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-media-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media-links li a:hover {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .service-item {
+        margin-bottom: 1.5rem;
+    }
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}

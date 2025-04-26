@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Us - Business Name">
+    <meta name="keywords" content="about, company, mission">
+    <meta name="author" content="Your Company">
+    <title>About Us - Business Name</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            <ul class="desktop-menu">
+                <li><img src="./fc4a3f64-c36c-4ac1-9e98-cf38e9a04d20.png" alt="Logo" id="navbar-logo"></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+          <ul>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="extra.html" onclick="toggleMenu()">Extra</a></li>
+        </ul>
+        </div>
+    <section class="about-hero">
+        <div class="container">
+          <h2>Who We Are</h2>
+          <p>We're passionate creators delivering powerful, modern websites that elevate businesses and make brands shine online.</p>
+        </div>
+      </section>
+    
+      <section class="about-content container">
+        <h3>Our Story</h3>
+        <p>We started with a simple mission — to build websites that don’t just look good but perform exceptionally. With a client-first mindset, we’ve helped businesses grow online through clean code, sharp design, and smart SEO strategies.</p>
+    
+        <h3>What We Do</h3>
+        <ul class="about-services">
+          <li>✅ Business websites (5+ pages)</li>
+          <li>🛍️ E-commerce setups (Shopify, WooCommerce)</li>
+          <li>📱 Mobile-first landing pages</li>
+          <li>⚙️ SEO optimization & performance tuning</li>
+          <li>🔐 Contact forms & integration</li>
+        </ul>
+    
+        <h3>Why Choose Us?</h3>
+        <p>Because you deserve a website that works as hard as you do. Every line of code we write is crafted with care to make your business stand out and win online.</p>
+      </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>We are a passionate team focused on delivering top-notch services to our clients. Our mission is to help businesses grow by providing professional solutions.</p>
+        </div>
+    </section>
+    
+  <section class="team">
+    <h3>Meet the Team</h3>
+    <div class="team-members">
+      <div class="member">
+        <img src="https://via.placeholder.com/150" alt="CEO" />
+        <h4>Alex Titan</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="member">
+        <img src="https://via.placeholder.com/150" alt="Developer" />
+        <h4>Sara Blaze</h4>
+        <p>Lead Developer</p>
+      </div>
+      <div class="member">
+        <img src="https://via.placeholder.com/150" alt="Designer" />
+        <h4>Jay Nova</h4>
+        <p>Creative Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission">
+    <h3>Our Mission</h3>
+    <p>To create sleek, affordable websites that work flawlessly on all devices. We blend creativity with strategy to bring your brand to life online.</p>
+  </section>
+
+    <div class="fixed-icons">
+        <a href="./contact.html" class="icon email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/+2349013834682" class="icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+      function toggleMenu() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+      }
+      </script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Home of Business | All rights reserved</p>
+            <ul class="social-media-links">
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

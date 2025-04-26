@@ -1,0 +1,410 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  /* Nav Container */
+  nav {
+    background-color: #000000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  /* Navigation Menu */
+  
+    
+    ul li {
+      position: relative;
+    }
+    
+    ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    /* Hover Effect */
+    ul li a:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+    
+    /* Active Link (optional, if you add an "active" class to the current page) */
+    ul li a.active {
+      background-color: #0056b3;
+      color: #fff;
+    }
+    #navbar-logo {
+      width: 50px; /* Adjust the size */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 15px; /* Space between logo and text */
+      border-radius: 20%;
+    }
+  /* Desktop Menu (Visible on Desktop) */
+  .desktop-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .desktop-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .desktop-menu li a:hover {
+    text-decoration: none;
+  }
+  
+  /* Hamburger Icon (Visible on mobile) */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Sidebar Menu (Hidden by default) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #007BFF;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.active {
+    left: 0; /* Show when active */
+  }
+  
+  .sidebar ul {
+    position: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 60px; /* Space for navbar */
+  }
+  
+  .sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 15px;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Hide Desktop Menu and Show Hamburger on Mobile */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none; /* Hide desktop menu on small screens */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger icon */
+    }
+  
+    .sidebar {
+      left: -250px; /* Sidebar is hidden on mobile by default */
+    }
+  }
+  @media (max-width: 768px) {
+            /* Show hamburger menu on mobile */
+            .hamburger {
+          display: flex;
+        }
+  
+        nav ul {
+          display: none;
+        }
+  
+        .mobile-menu.active {
+          display: block;
+        }
+      }
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+/* Services Hero Section */
+.services-hero {
+    background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.services-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Service List Section */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Add this in your services.css */
+
+/* Animation for service items */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Service box styling */
+  .service-box {
+    animation-delay: 0.3s; /* Adjust delay for different items */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Service box title */
+  .service-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Service box description */
+  .service-box p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Add to Cart Button */
+  .add-to-chart {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .add-to-chart:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* Add some responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .service-box {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .service-box h3 {
+      font-size: 1.3rem;
+    }
+  
+    .service-box p {
+      font-size: 0.9rem;
+    }
+  
+    .add-to-chart {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+s  
+
+/* Chart Container (if shared in services page) */
+#chartContainer {
+    margin: 3rem auto;
+    max-width: 800px;
+    display: none;
+}
+.fixed-icons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right side of the screen */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between icons */
+    z-index: 1000; /* Ensure icons are on top of other elements */
+}
+
+.fixed-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333; /* Dark background for visibility */
+    color: #fff; /* White icon color */
+    text-decoration: none;
+    font-size: 24px; /* Icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.fixed-icons .icon:hover {
+    background-color: #555; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Specific styles for each icon */
+.fixed-icons .email {
+    background-color: #007bff; /* Blue color for email */
+}
+
+.fixed-icons .whatsapp {
+    background-color: #25D366; /* Green color for WhatsApp */
+}
+.view-chart-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .view-chart-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .chart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .close-btn {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .close-btn:hover {
+    color: #000;
+  }
+  
+  #chartItems li {
+    margin: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social-media-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-media-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}

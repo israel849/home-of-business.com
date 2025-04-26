@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Business Name">
+    <meta name="keywords" content="contact, support, help">
+    <meta name="author" content="Your Company">
+    <title>Contact Us - Business Name</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <script src="assets/js/form-validation.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+                <ul class="desktop-menu">
+                    <li><img src="./fc4a3f64-c36c-4ac1-9e98-cf38e9a04d20.png" alt="Logo" id="navbar-logo"></li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="extra.html">Extra</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                    <li><a href="extra.html" onclick="toggleMenu()">Extra</a></li>
+                </ul>
+            </div>
+    <div class="chat-box">
+        <h2>Send Us a Message</h2>
+        <form id="chatForm" action="mailto:avatartitan6@gmail.com" method="post" enctype="text/plain">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            
+            <label for="userMessage">Message:</label>
+            <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="./contact.js"></script>
+    <script>
+        function toggleMenu() {
+          const sidebar = document.querySelector('.sidebar');
+          sidebar.classList.toggle('active');
+        }
+        </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Home of Business | All rights reserved</p>
+            <ul class="social-media-links">
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services - Business Name">
+    <meta name="keywords" content="services, business, solutions">
+    <meta name="author" content="Your Company">
+    <title>Services - Business Name</title>
+    <link rel="stylesheet" href="./services.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+            <ul class="desktop-menu">
+                <li><img src="./fc4a3f64-c36c-4ac1-9e98-cf38e9a04d20.png" alt="Logo" id="navbar-logo"></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+                <ul>
+                  <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                  <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                  <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+                  <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                  <li><a href="extra.html" onclick="toggleMenu()">Extra</a></li>
+                </ul>
+        </div>
+    <!-- View Chart Button -->
+    <button id="viewChartBtn" class="view-chart-btn">🛒 View Chart</button>
+
+<!-- Chart Modal -->
+<div id="chartModal" class="chart-modal">
+  <div class="chart-content">
+    <span id="closeChart" class="close-btn">&times;</span>
+    <h3>Your Selected Services</h3>
+    <ul id="chartItems"></ul>
+    <p id="totalAmount"></p>
+  </div>
+</div>
+
+    <section class="services-hero">
+        <div class="container">
+          <h2>Our Services</h2>
+          <p>We help businesses grow online with powerful, customized websites.</p>
+        </div>
+      </section>
+    
+      <section class="service-list container">
+        <div class="service-box" data-name="💼 Business Websites" data-price="150">
+          <h3>💼 Business Websites – $150</h3>
+          <p>Fully responsive, custom-designed websites with 5 professional pages including Home, About, Services, Contact, and one custom page.</p>
+          <button class="add-to-chart">Add to Chart</button>
+        </div>
+    
+        <div class="service-box" data-name="🛒 E-commerce Stores " data-price="250">
+          <h3>🛒 E-commerce Stores – $250</h3>
+          <p>Shopify or WooCommerce stores built for product selling, payment integration, and mobile-friendliness.</p>
+          <button class="add-to-chart">Add to Chart</button>
+        </div>
+    
+        <div class="service-box" data-name="📱 Landing Pages " data-price="100">
+          <h3>📱 Landing Pages – $100</h3>
+          <p>Single-page, high-converting landing pages for product launches, promotions, or mobile traffic.</p>
+          <button class="add-to-chart">Add to Chart</button>
+        </div>
+    
+        <div class="service-box" data-name="🚀 SEO Optimization" data-price="80">
+          <h3>🚀 SEO Optimization – $80</h3>
+          <p>Speed, structure, and keyword optimization to help your website rank better in Google searches.</p>
+          <button class="add-to-chart">Add to Chart</button>
+        </div>
+    
+        <div class="service-box" data-name="📧 Contact Form & Email Setup" data-price="50">
+          <h3>📧 Contact Form & Email Setup – $50</h3>
+          
+          <p>Secure and working contact forms that send messages directly to your email or dashboard.</p>
+          <button class="add-to-chart">Add to Chart</button>
+        </div>
+      </section>
+    <div class="fixed-icons">
+        <a href="./contact.html" class="icon email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/+2349013834682" class="icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="./services.js"></script>
+    <script>
+      function toggleMenu() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+      }
+      </script>
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+          <p>© 2025 Home of Business | All rights reserved</p>
+          <ul class="social-media-links">
+              <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+              <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          </ul>
+      </div>
+  </footer>
+
+</body>
+
+</html>

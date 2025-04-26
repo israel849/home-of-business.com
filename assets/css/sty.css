@@ -1,0 +1,743 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+/* Header */
+/* Navigation Header */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  nav ul li a.welcome-msg {
+    color: #2ecc71; /* Welcome message color */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav ul li a.logout-btn {
+    color: #e74c3c; /* Logout color */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a.logout-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* To keep the user from seeing login/signup if they are logged in */
+nav ul li a[href="login.html"],
+nav ul li a[href="signup.html"] {
+    display: none; /* Hide login/signup if logged in */
+}
+
+#logoutButton {
+    position: flex;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #logoutButton:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+  }
+  
+
+/* Hero Section */
+#hero {
+    background-color: #2f3235;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+    border-radius: 2%;
+}
+
+#hero .cta-button {
+    background-color: #32a9ce;
+    padding: 15px 30px;
+    color: rgb(31, 114, 14);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero .cta-button:hover {
+    background-color: #ff4500;
+}
+#navbar-logo {
+    width: 50px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and text */
+    border-radius: 20%;
+  }
+#HB{
+  color: rgba(18, 250, 95, 0.644);
+}
+.HB1, #typedText{
+    color: aqua;
+}
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* Service Items */
+#services .service-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #020202;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}s
+
+#services .service-item i {
+    font-size: 40px;
+    color: #2421e2;
+}s
+#services .service-item h3, p{
+    color: #007acc;
+}
+#services .service-items i{
+    color: #464f58;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    background-color: #003366;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+#features {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+}
+
+#features .feature-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #0e0d0d;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgb(14, 14, 14);
+}
+
+#features .feature-item i {
+    font-size: 40px;
+    color: #181a38;
+}
+#testimonials {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 18px;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social-media-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-media-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+/* Responsive Design */
+.fixed-icons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right side of the screen */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between icons */
+    z-index: 1000; /* Ensure icons are on top of other elements */
+}
+
+.fixed-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333; /* Dark background for visibility */
+    color: #0f0f0f; /* White icon color */
+    text-decoration: none;
+    font-size: 24px; /* Icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.fixed-icons .icon:hover {
+    background-color: #555; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Specific styles for each icon */
+.fixed-icons .email {
+    background-color: #007bff; /* Blue color for email */
+}
+
+.fixed-icons .whatsapp {
+    background-color: #25D366; /* Green color for WhatsApp */
+}
+
+.about-hero {
+    background-color: #f7f9fc;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .about-content {
+    padding: 40px 20px;
+  }
+  
+  .about-content h3 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-top: 30px;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .about-services {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .about-services li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  /* Services Hero Section */
+  .extra-hero {
+    background-color: #f0f6ff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .extra-hero h2 {
+    font-size: 2.5rem;
+    color: #2d3436;
+  }
+  
+  .extra-content {
+    padding: 40px 20px;
+  }
+  
+  .extra-content > div {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .extra-content h3 {
+    margin-bottom: 10px;
+    color: #007acc;
+  }
+  
+  .extra-content p {
+    color: #333;
+    line-height: 1.6;
+  }
+  .blog-hero {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .blog-hero h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+  }
+  
+  .blog-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 8px;
+  }
+  
+  .blog-content {
+    padding: 30px 20px;
+    line-height: 1.7;
+  }
+  
+  .blog-content h3 {
+    margin-top: 25px;
+    color: #007acc;
+  }
+  
+  .blog-content a {
+    color: #007acc;
+    text-decoration: underline;
+  }
+  .icon-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-whatsapp:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-whatsapp i {
+    color: white;
+    font-size: 30px;
+  }
+  /* Add in styles.css */
+header.sticky {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  /* Add in styles.css */
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #ff4500;
+}
+
+
+  /* Add dark-mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+    align-self: center;
+  }
+  
+  body.dark-mode header {
+    background-color: #1f1f1f;
+  }
+  .team {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .team h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .member {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 200px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Mission Section */
+  .mission {
+    background: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .mission h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  /* Global container spacing */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  /* About Hero Section */
+  .about-hero {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .about-hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* About Content Section */
+  .about-content {
+    background: #fff;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+  
+  .about-content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 2rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Custom List Styling */
+  .about-services {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .about-services li {
+    font-size: 1.1rem;
+    margin: 0.6rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .about-services li::before {
+    content: "✔";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Additional About Section (Bottom) */
+  #about {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  #about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-hero h2 {
+      font-size: 2rem;
+    }
+  
+    .about-hero p,
+    .about-content p,
+    .about-services li {
+      font-size: 1rem;
+    }
+  
+    .about-content h3,
+    #about h1 {
+      font-size: 1.5rem;
+    }
+  }
+  #darkToggle {
+    position: flex;
+    bottom: 30px;
+    right: 30px;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  #darkToggle:hover {
+    background: #555;
+    transform: scale(1.1);
+  }
+  /* Extra Hero Section */
+.extra-hero {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+  
+  .extra-hero h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 15px;
+  }
+  
+  .extra-hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Extra Content Section */
+  .extra-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 20px 0;
+  }
+  
+  .extra-content > div {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    flex: 1 1 30%;
+    min-width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .extra-content > div:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Text Styling Inside */
+  .extra-content h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 15px;
+  }
+  
+  .extra-content p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .extra-content strong {
+    color: #000;
+  }
+  
+  /* Blog Link */
+  .extra-content .blog a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+  
+  .extra-content .blog a:hover {
+    color: #0056b3;
+  }
+  /* Animation for scroll appearance */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  animation: slideUpFade 0.8s ease forwards;
+}
+#testimonials .cta-button {
+    background-color: #32a9ce;
+    padding: 15px 30px;
+    color: rgb(31, 114, 14);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#testimonials .cta-button:hover {
+    background-color: #ff4500;
+}
